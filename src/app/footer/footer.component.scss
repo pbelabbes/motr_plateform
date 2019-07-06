@@ -1,0 +1,14 @@
+@import "../Ressources/variables.scss";
+
+div{
+    background-color: $primary;
+    position: fixed;
+    width: 100%;    
+    p{
+        color:$light;
+        bottom: 20px;
+        text-align: center;
+        width: 100%;
+        font-size: 0.8em;
+    }
+}
