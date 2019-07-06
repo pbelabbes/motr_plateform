@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# App Info 
+
+## Rights matrix
+
+| User | submit an event  | consults events  | subscribe to an event | manage events | manage users from a city | manage the plateform  | 
+| ---- |:----------------:|:----------------------:|:---------------:|:-------------:|:------------------------:|:---------------------:|
+| Visitor  | YES | YES | NO | NO | NO | NO |
+| Participant | YES | YES | YES | NO | NO | NO |
+| City events admin  | YES | YES | YES | YES ( affiliate to his city ) | NO | NO |
+| City admin  | YES | YES | YES | YES | YES | NO |
+| Plateform admin  | YES | YES | YES | YES | YES | YES |
+| Super admin  | YES | YES | YES | YES | YES | YES |
+
+*The super admin* can manage all the plateform and all plateform admins
