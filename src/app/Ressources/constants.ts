@@ -1,0 +1,1 @@
+export const APPNAME = 'MIAGE On The Roads';

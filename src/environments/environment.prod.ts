@@ -1,7 +1,9 @@
+import {logs} from "./logs";
+
 export const environment = {
   production: true,
   firebaseConfig : {
-    apiKey: "AIzaSyDKMq7BniOlTmjpGJD1N1jqX_8Ale0FrBo",
+    apiKey: logs.fireBaseAPIKey,
     authDomain: "motr-plateform.firebaseapp.com",
     databaseURL: "https://motr-plateform.firebaseio.com",
     projectId: "motr-plateform",

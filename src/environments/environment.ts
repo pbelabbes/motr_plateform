@@ -1,3 +1,5 @@
+import {logs} from "./logs";
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
@@ -5,7 +7,7 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: "AIzaSyDKMq7BniOlTmjpGJD1N1jqX_8Ale0FrBo",
+    apiKey: logs.fireBaseAPIKey,
     authDomain: "motr-plateform.firebaseapp.com",
     databaseURL: "https://motr-plateform.firebaseio.com",
     projectId: "motr-plateform",
