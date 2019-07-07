@@ -49,3 +49,5 @@ testem.log
 Thumbs.db
 
 /.firebase
+src/app/media/cover.zip
+src/app/media/cover/Over-the-Map.mp4
