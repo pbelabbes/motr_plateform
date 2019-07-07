@@ -5,7 +5,12 @@ import { AppRoutingModule } from './shared/routing/app-routing.module';
 import { AppComponent } from './app.component';
 
 // Material
-import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatToolbarModule,
+        MatFormFieldModule,
+        MatCardModule,
+        MatInputModule,
+        MatButtonModule} from '@angular/material';
+
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';  
@@ -45,7 +50,11 @@ import { AuthService } from "./shared/services/auth.service";
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

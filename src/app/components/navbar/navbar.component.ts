@@ -11,12 +11,12 @@ import { Router } from '@angular/router'
 export class NavbarComponent implements OnInit {
 
   appName:String=APPNAME;
-  isLogged:boolean;
+  isLogged:boolean=this.authService.isLoggedIn;
 
   constructor(public authService:AuthService, public router:Router) { }
 
   ngOnInit() {
-    this.isLogged=this.authService.isLoggedIn;
+    
   }
 
   public logout(){
