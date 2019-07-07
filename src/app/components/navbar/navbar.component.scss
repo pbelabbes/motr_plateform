@@ -4,28 +4,24 @@ mat-toolbar{
 
    font-size: 1em;
   
-  
+  display: flex;
   
    span{
        
       margin: 2em;
       display: flex;
       height: 100%;
-      
-   a{ 
-      padding-top:1em;
-      text-decoration: none;
       color: $secondary;
-      // height: 100%;
-      
 
       &:hover{ 
          color:$light;
          background-color:$secondary;
+         cursor: pointer;
       }   
+      
      
    }
-}
+
 
 
    .fill-remaining-space {

@@ -1,9 +1,10 @@
 <mat-toolbar >
-    <span class="title"><a href="/">{{appName}}</a></span>
-    <span><a href="">Proposer un événement</a></span>
-    <span><a href="">Participer à un événement</a></span>
-    <span class="fill-remaining-space"></span>
-    <span><a href="">Se connecter</a></span>
-    <span><a href="">S'inscrire</a></span>
+    <span class="title" (click)='home()'><p>{{appName}}</p></span>
+    <span><p>Proposer un événement</p></span>
+    <span><p>Participer à un événement</p></span>
+    <div class="fill-remaining-space"></div>
+    <span *ngIf='!isLogged' (click)='login()'><p>Se connecter</p></span>
+    <span *ngIf='!isLogged' (click)='register()'><p>S'inscrire</p></span>
+    <span *ngIf='isLogged' (click)='logout()'><p>Se deconnecter</p></span>
 </mat-toolbar>
     

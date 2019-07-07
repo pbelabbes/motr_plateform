@@ -2,11 +2,11 @@
 
 div{
     background-color: $primary;
-    position: fixed;
+    position: absolute;
+    bottom: 0;
     width: 100%;    
     p{
         color:$light;
-        bottom: 20px;
         text-align: center;
         width: 100%;
         font-size: 0.8em;
