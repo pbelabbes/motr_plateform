@@ -1,5 +1,5 @@
 @import "../../Ressources/variables.scss";
-mat-card{
+.middle_card{
     width: 325px;
     min-height: 300px;
     margin-left:37.5%;
@@ -25,7 +25,7 @@ mat-card{
           }
     }
 
-    .forgotPassword,.redirectToLogin{
+    .under_link{
         color:$accent;
 
         &:hover{
