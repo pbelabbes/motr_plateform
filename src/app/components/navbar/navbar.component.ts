@@ -22,16 +22,4 @@ export class NavbarComponent implements OnInit {
   public logout(){
     this.authService.SignOut();
   }
-
-  public login(){
-    this.router.navigate(['login']);
-  }
-
-  public register(){
-    this.router.navigate(['register']);
-  }
-
-  public home(){
-    this.router.navigate(['/']);
-  }
 }
