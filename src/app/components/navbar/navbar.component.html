@@ -1,10 +1,10 @@
 <mat-toolbar >
-    <span class="title" (click)='home()'><p>{{appName}}</p></span>
+    <span class="title" routerLink="/"><p>{{appName}}</p></span>
     <span><p>Proposer un événement</p></span>
     <span *ngIf='isLogged'><p>Participer à un événement</p></span>
     <div class="fill-remaining-space"></div>
-    <span *ngIf='!isLogged' (click)='login()'><p>Se connecter</p></span>
-    <span *ngIf='!isLogged' (click)='register()'><p>S'inscrire</p></span>
+    <span *ngIf='!isLogged' routerLink="/login"><p>Se connecter</p></span>
+    <span *ngIf='!isLogged' routerLink="/register"><p>S'inscrire</p></span>
     <span *ngIf='isLogged' (click)='logout()'><p>Se deconnecter</p></span>
 </mat-toolbar>
     

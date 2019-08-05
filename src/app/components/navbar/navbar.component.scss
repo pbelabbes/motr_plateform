@@ -12,10 +12,10 @@ mat-toolbar{
       display: flex;
       height: 100%;
       color: $secondary;
+      
 
       &:hover{ 
-         color:$light;
-         background-color:$secondary;
+         color:$accent;
          cursor: pointer;
       }   
       
