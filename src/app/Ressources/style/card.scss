@@ -1,8 +1,9 @@
-@import "../../Ressources/style/variables.scss";
-.long_card{
-    width: 500px;
+@import "./variables.scss";
+
+.middle_card{
+    width: 325px;
     min-height: 300px;
-    margin-left:32.5%;
+    margin-left:37.5%;
     margin-top:50px;
     h3{
         font-size : 2em;
