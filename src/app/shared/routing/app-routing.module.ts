@@ -13,6 +13,7 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { ForgotPasswordComponent } from '../../authentication/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from '../../authentication/verify-email/verify-email.component';
 import { auth } from 'firebase';
+import { CreateEventComponent } from 'src/app/event_management/create-event/create-event.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] }
+  { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'create-event', component: CreateEventComponent }
+
 ];
 
 @NgModule({

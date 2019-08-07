@@ -1,0 +1,41 @@
+<mat-card class="middle_card">
+
+    <h3>Publier un événement</h3>
+      <form  [formGroup]="eventForm" class="form" (ngSubmit)="onSubmit()">
+        
+        <mat-form-field>
+          <input matInput type="text" placeholder="Nom de l'événement" forControlName="name" required>
+        </mat-form-field>
+  
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="date de l'événement">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker formControlName="date"></mat-datepicker>
+        </mat-form-field>
+
+        <div formGroupName="location">
+          <mat-form-field >
+              <textarea matInput placeholder="Adresse" formControlName="address"></textarea>
+          </mat-form-field>
+          
+          <table  cellspacing="0"><tr>
+          <td><mat-form-field >
+              <input matInput placeholder="Ville" formControlName="city">
+          </mat-form-field></td>
+          <td><mat-form-field >
+              <input matInput #postalCode maxlength="5" placeholder="Postal Code" formControlName="zipCode">
+          </mat-form-field></td>
+          </tr></table>
+        </div>
+
+        <mat-form-field >
+            <input type="number" matInput placeholder="Nombre de place" formControlName="capacity"/>
+        </mat-form-field>
+
+        <mat-form-field >
+            <textarea matInput placeholder="Ajouter les informations complémentaire : type d'événement, contact, comment s'inscrire, horaire etc." formControlName="description"></textarea>
+        </mat-form-field>
+       
+        <button type="submit" [disabled]="!profileForm.valid" mat-button >Publier</button>
+      </form>          
+  </mat-card>

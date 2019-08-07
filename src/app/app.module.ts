@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './shared/routing/app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Material
 import {MatToolbarModule,
         MatFormFieldModule,
         MatCardModule,
         MatInputModule,
-        MatButtonModule} from '@angular/material';
+        MatButtonModule,
+        MatDatepickerModule,
+        MatNativeDateModule} from '@angular/material';
 
+//Date
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';  
@@ -29,6 +33,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 //Services
 import { AuthService } from "./shared/services/auth.service";
+import { EventService } from "./shared/services/event.service";
+import { CreateEventComponent } from './event_management/create-event/create-event.component';
 
 
 
@@ -41,12 +47,14 @@ import { AuthService } from "./shared/services/auth.service";
     VerifyEmailComponent,
     NavbarComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateEventComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
@@ -54,7 +62,9 @@ import { AuthService } from "./shared/services/auth.service";
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
