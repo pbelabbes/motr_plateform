@@ -1,4 +1,5 @@
 import {logs} from "./logs";
+// import * as firebase from 'firebase';
 
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
@@ -16,6 +17,8 @@ export const environment = {
     appId: "1:637030443066:web:c57d5c67a138c2da"
   }
 };
+
+// export const db = firebase.firestore();
 
 
 /*
