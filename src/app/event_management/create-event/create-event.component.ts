@@ -10,7 +10,7 @@ export class CreateEventComponent implements OnInit {
 
 
   eventForm = this.fb.group({
-    name: ['', Validators.required],
+    eventName: ['', Validators.required],
     date:['',Validators.required],
     location : this.fb.group({
       address:['',Validators.required],
@@ -24,7 +24,7 @@ export class CreateEventComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   onSubmit(){
-
+    console.log(this.eventForm);
   }
 
   ngOnInit() {
