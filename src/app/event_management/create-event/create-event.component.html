@@ -36,6 +36,6 @@
           <mat-hint>Type d'événement, contact, comment s'inscrire, horaire etc."</mat-hint>
         </mat-form-field>
       
-        <button type="submit" mat-button >Proposer</button>
+        <button type="submit" mat-button [disabled]="!eventForm.valid">Proposer</button>
       </form>          
   </mat-card>
