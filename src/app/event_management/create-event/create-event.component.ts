@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Event } from '../../models/event';
 
 @Component({
   selector: 'app-create-event',
@@ -24,7 +25,9 @@ export class CreateEventComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   onSubmit(){
-    console.log(this.eventForm);
+    console.log(this.eventForm.value);
+    let event:Event =new Event(this.eventForm.value);
+    console.log(event);
   }
 
   ngOnInit() {
