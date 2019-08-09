@@ -1,0 +1,43 @@
+<mat-card class="long_card">
+
+    <h3>Proposer un événement</h3>
+      <form  [formGroup]="eventForm" class="form" (ngSubmit)="onSubmit()">
+        
+        <mat-form-field>
+          <input matInput type="text" placeholder="Nom de l'événement" formControlName="eventName" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <div formGroupName="location" class="form">
+          
+          <mat-form-field >
+              <textarea matInput type="text" placeholder="Adresse" formControlName="address" required></textarea>
+          </mat-form-field>
+
+          <table  cellspacing="0"><tr>
+            <td><mat-form-field >
+              <input matInput type="text" placeholder="Ville" formControlName="city" required>
+            </mat-form-field></td>
+            <td><mat-form-field >
+              <input matInput type="text" #postalCode maxlength="5" placeholder="Postal Code" formControlName="zipCode" required>
+            </mat-form-field></td>
+          </tr></table>
+        </div>
+
+        <mat-form-field >
+            <input type="number" matInput placeholder="Nombre de place" formControlName="capacity"/>
+        </mat-form-field>
+
+        <mat-form-field >
+          <textarea matInput type="text" placeholder="Ajouter les informations complémentaires"  formControlName="description"></textarea>
+          <mat-hint>Type d'événement, contact, comment s'inscrire, horaire etc."</mat-hint>
+        </mat-form-field>
+      
+        <button type="submit" mat-button [disabled]="!eventForm.valid">Proposer</button>
+      </form>          
+  </mat-card>

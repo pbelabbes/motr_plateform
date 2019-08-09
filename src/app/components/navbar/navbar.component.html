@@ -1,6 +1,6 @@
 <mat-toolbar >
     <span class="title" routerLink="/"><p>{{appName}}</p></span>
-    <span><p>Proposer un événement</p></span>
+    <span *ngIf='isLogged' routerLink="/create-event"><p>Proposer un événement</p></span>
     <span *ngIf='isLogged'><p>Participer à un événement</p></span>
     <div class="fill-remaining-space"></div>
     <span *ngIf='!isLogged' routerLink="/login"><p>Se connecter</p></span>
