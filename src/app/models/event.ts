@@ -4,7 +4,6 @@ export class Event {
     id:string;
     user_id:string;
     name:string;
-    type:string;
     date:Date;
     location:Address;
     description:string;
