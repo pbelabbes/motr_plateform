@@ -13,18 +13,20 @@
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
-        <div formGroupName="location">
+        <div formGroupName="location" class="form">
           
           <mat-form-field >
               <textarea matInput type="text" placeholder="Adresse" formControlName="address" required></textarea>
           </mat-form-field>
-                    
-          <mat-form-field >
+
+          <table  cellspacing="0"><tr>
+            <td><mat-form-field >
               <input matInput type="text" placeholder="Ville" formControlName="city" required>
-          </mat-form-field>
-          <mat-form-field >
+            </mat-form-field></td>
+            <td><mat-form-field >
               <input matInput type="text" #postalCode maxlength="5" placeholder="Postal Code" formControlName="zipCode" required>
-          </mat-form-field>
+            </mat-form-field></td>
+          </tr></table>
         </div>
 
         <mat-form-field >
