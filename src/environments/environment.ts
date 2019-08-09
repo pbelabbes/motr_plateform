@@ -1,4 +1,5 @@
 import {logs} from "./logs";
+import * as firebase from 'firebase';
 // import * as firebase from 'firebase';
 
 // This file can be replaced during build by using the `fileReplacements` array.
@@ -18,7 +19,6 @@ export const environment = {
   }
 };
 
-// export const db = firebase.firestore();
 
 
 /*
