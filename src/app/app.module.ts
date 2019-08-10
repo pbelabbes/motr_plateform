@@ -29,7 +29,7 @@ import { RegisterComponent } from './authentication/register/register.component'
 import { ForgotPasswordComponent } from './authentication/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './authentication/verify-email/verify-email.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 //Services
