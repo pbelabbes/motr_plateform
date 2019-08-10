@@ -12,7 +12,8 @@ import {MatToolbarModule,
         MatInputModule,
         MatButtonModule,
         MatDatepickerModule,
-        MatNativeDateModule} from '@angular/material';
+        MatNativeDateModule,
+        MatSelectModule} from '@angular/material';
 
 //Date
 
@@ -28,7 +29,7 @@ import { RegisterComponent } from './authentication/register/register.component'
 import { ForgotPasswordComponent } from './authentication/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './authentication/verify-email/verify-email.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 //Services
@@ -65,6 +66,7 @@ import { CreateEventComponent } from './event_management/create-event/create-eve
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
