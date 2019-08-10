@@ -1,8 +1,12 @@
 @import "./Ressources/style/variables.scss";
 
-.content{
-    min-height:512px;
+.mat-app-background{
+    height: 100vh;
 }
+
 app-footer{
     height: 50px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
