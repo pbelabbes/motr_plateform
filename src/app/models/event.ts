@@ -4,6 +4,7 @@ export class Event {
     id:string;
     user_id:string;
     name:string;
+    type:string;
     date:Date;
     location:Address;
     description:string;
@@ -12,6 +13,7 @@ export class Event {
     constructor(userId:string,formEvent: {
                     userId: string,
                     eventName: string,
+                    type:string,
                     date:string,
                     location : {
                     address:string,
@@ -23,10 +25,11 @@ export class Event {
       }){
         this.user_id=userId;
         this.name=formEvent.eventName;
+        this.type=formEvent.type;
         this.date=new Date(formEvent.date);
         this.location=new Address(this.name,formEvent.location);
-        console.log(this.location);
         this.description=formEvent.description;
         this.capacity=formEvent.capacity;
     }
 }
+

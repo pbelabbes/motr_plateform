@@ -11,9 +11,11 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class CreateEventComponent implements OnInit {
 
+  eventTypes=["salon/forum","conférence"];
 
   eventForm = this.fb.group({
     eventName: ['', Validators.required],
+    eventType:['',Validators.required],
     date:['',Validators.required],
     location : this.fb.group({
       address:['',Validators.required],
@@ -22,18 +24,15 @@ export class CreateEventComponent implements OnInit {
     }),
     capacity:[''],
     description:['']
-  })
+  });
 
   constructor(private fb: FormBuilder,
               private eS: EventService,
               public afAuth: AngularFireAuth) { }
 
   onSubmit(){
-    console.log(this.eventForm.value);
     const user = JSON.parse(localStorage.getItem('user'));
-    console.log(user);
     let event:Event =new Event(user.uid,this.eventForm.value);
-    console.log(event);
     this.eS.addEvent(event);
   }
 

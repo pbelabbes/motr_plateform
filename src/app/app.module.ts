@@ -12,7 +12,8 @@ import {MatToolbarModule,
         MatInputModule,
         MatButtonModule,
         MatDatepickerModule,
-        MatNativeDateModule} from '@angular/material';
+        MatNativeDateModule,
+        MatSelectModule} from '@angular/material';
 
 //Date
 
@@ -65,6 +66,7 @@ import { CreateEventComponent } from './event_management/create-event/create-eve
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

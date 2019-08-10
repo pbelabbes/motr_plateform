@@ -13,6 +13,25 @@
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
+        <mat-form-field>
+          <mat-select formControlName="eventType" placeholder="Type d'événement" required>
+            <mat-option *ngFor="let type of eventTypes" [value]="type" >
+              {{type}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field >
+          <input type="number" matInput placeholder="Nombre de bénévoles nécessaires" formControlName="capacity"/>
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-hint>Contact, comment s'inscrire, public, horaire etc."</mat-hint>
+        <textarea matInput type="text" placeholder="Ajouter les informations complémentaires"  formControlName="description"></textarea>
+        
+      </mat-form-field>
+      <hr class="form-sep"/>
+      <h4>Adresse : </h4>
         <div formGroupName="location" class="form">
           
           <mat-form-field >
@@ -28,15 +47,6 @@
             </mat-form-field></td>
           </tr></table>
         </div>
-
-        <mat-form-field >
-            <input type="number" matInput placeholder="Nombre de place" formControlName="capacity"/>
-        </mat-form-field>
-
-        <mat-form-field >
-          <textarea matInput type="text" placeholder="Ajouter les informations complémentaires"  formControlName="description"></textarea>
-          <mat-hint>Type d'événement, contact, comment s'inscrire, horaire etc."</mat-hint>
-        </mat-form-field>
       
         <button type="submit" mat-button [disabled]="!eventForm.valid">Proposer</button>
       </form>          
